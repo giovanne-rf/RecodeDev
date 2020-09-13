@@ -4,11 +4,11 @@ import java.util.Scanner;
 
 public class Booking {
 
-    public static void main(String[] args) throws ParseException {
+    public static void main(final String[] args) throws ParseException {
 
-        Scanner entrada = new Scanner(System.in);
+        final Scanner entrada = new Scanner(System.in);
 
-        Customers cliente = new Customers();
+        final Customers cliente = new Customers();
         System.out.println("--------------------------------------------------------------------");
         System.out.println("Digite o tipo de cliente da reserva [1 - Regular] / [2-Fidelidade]: ");
         String tipoCliente= cliente.customerType(entrada.nextInt());
@@ -45,15 +45,15 @@ public class Booking {
                         ano = entrada.nextInt();
                     }
                     System.out.println("Registro realizado!: ");
-                    Days data1 = new Days(dia, mes, ano);
+                    final Days data1 = new Days(dia, mes, ano);
 
-        String diaDaSemana1 = data1.WeekDay(dia, mes, ano);
+        final String diaDaSemana1 = data1.WeekDay(dia, mes, ano);
         data1.DayOfWeek(diaDaSemana1);
 
-        String mesDoAno1 = data1.MonthOfYear(dia, mes, ano);
+        final String mesDoAno1 = data1.MonthOfYear(dia, mes, ano);
         data1.MonthOfYear(dia, mes, ano);
 
-        String diaDaSemanaIngles1 = data1.DayOfweek;
+        final String diaDaSemanaIngles1 = data1.DayOfweek;
         Hotels hotel1 = new Hotels();
         Hotels hotel2 = new Hotels();
         Hotels hotel3 = new Hotels();
@@ -61,9 +61,9 @@ public class Booking {
         hotel1.ParqueDaFlores(diaDaSemana1, tipoCliente);
         hotel2.JardimBotanico(diaDaSemana1, tipoCliente);
         hotel3.MarAtlantico(diaDaSemana1, tipoCliente);
-        double tarifa1h1 = hotel1.ParqueDaFlores(diaDaSemana1, tipoCliente);
-        double tarifa1h2 = hotel2.JardimBotanico(diaDaSemana1, tipoCliente);
-        double tarifa1h3 = hotel3.MarAtlantico(diaDaSemana1, tipoCliente);
+        final double tarifa1h1 = hotel1.ParqueDaFlores(diaDaSemana1, tipoCliente);
+        final double tarifa1h2 = hotel2.JardimBotanico(diaDaSemana1, tipoCliente);
+        final double tarifa1h3 = hotel3.MarAtlantico(diaDaSemana1, tipoCliente);
 
 //        System.out.println(tipoCliente+":" + data1.day+mesDoAno1+data1.year+"("+diaDaSemanaIngles1+")");
 //        System.out.println("Primeira data selecionada: <" + data1.ChooseDays(dia, mes, ano)+">");
@@ -97,13 +97,13 @@ public class Booking {
                         System.out.println("!!! Valor INVÁLIDO !!! digite o ano maior ou igual que o atual: ");
                         ano = entrada.nextInt();
                     }
-                    Days data2 = new Days(dia, mes, ano);
+                    final Days data2 = new Days(dia, mes, ano);
 
-        String diaDaSemana2 = data2.WeekDay(dia, mes, ano);
+        final String diaDaSemana2 = data2.WeekDay(dia, mes, ano);
 
-        String mesDoAno2 = data2.MonthOfYear(dia, mes, ano);
+        final String mesDoAno2 = data2.MonthOfYear(dia, mes, ano);
         data2.MonthOfYear(dia, mes, ano);
-        String diaDaSemanaIngles2 = data2.DayOfweek;
+        final String diaDaSemanaIngles2 = data2.DayOfweek;
 
         hotel1 = new Hotels();
         hotel2 = new Hotels();
@@ -112,9 +112,9 @@ public class Booking {
         hotel1.ParqueDaFlores(diaDaSemana2, tipoCliente);
         hotel2.JardimBotanico(diaDaSemana2, tipoCliente);
         hotel3.MarAtlantico(diaDaSemana2, tipoCliente);
-        double tarifa2h1 = hotel1.ParqueDaFlores(diaDaSemana2, tipoCliente);
-        double tarifa2h2 = hotel2.JardimBotanico(diaDaSemana2, tipoCliente);
-        double tarifa2h3 = hotel3.MarAtlantico(diaDaSemana2, tipoCliente);
+        final double tarifa2h1 = hotel1.ParqueDaFlores(diaDaSemana2, tipoCliente);
+        final double tarifa2h2 = hotel2.JardimBotanico(diaDaSemana2, tipoCliente);
+        final double tarifa2h3 = hotel3.MarAtlantico(diaDaSemana2, tipoCliente);
 
 //        System.out.println(tipoCliente+":" + data2.day+mesDoAno2+data2.year+"("+diaDaSemanaIngles2+")");
 //        System.out.println("Primeira data selecionada: <" + data1.ChooseDays(dia, mes, ano)+">");
@@ -148,13 +148,13 @@ public class Booking {
                         System.out.println("!!! Valor INVÁLIDO !!! digite o ano maior ou igual que o atual: ");
                         ano = entrada.nextInt();
                     }
-                    Days data3 = new Days(dia, mes, ano);
+                    final Days data3 = new Days(dia, mes, ano);
 
-        String diaDaSemana3 = data3.WeekDay(dia, mes, ano);
+        final String diaDaSemana3 = data3.WeekDay(dia, mes, ano);
 
-        String mesDoAno3 = data3.MonthOfYear(dia, mes, ano);
+        final String mesDoAno3 = data3.MonthOfYear(dia, mes, ano);
         data3.MonthOfYear(dia, mes, ano);
-        String diaDaSemanaIngles3 = data3.DayOfweek;
+        final String diaDaSemanaIngles3 = data3.DayOfweek;
 
         hotel1 = new Hotels();
         hotel2 = new Hotels();
@@ -163,23 +163,23 @@ public class Booking {
         hotel1.ParqueDaFlores(diaDaSemana3, tipoCliente);
         hotel2.JardimBotanico(diaDaSemana3, tipoCliente);
         hotel3.MarAtlantico(diaDaSemana3, tipoCliente);
-        double tarifa3h1 = hotel1.ParqueDaFlores(diaDaSemana3, tipoCliente);
-        double tarifa3h2 = hotel2.JardimBotanico(diaDaSemana3, tipoCliente);
-        double tarifa3h3 = hotel3.MarAtlantico(diaDaSemana3, tipoCliente);
+        final double tarifa3h1 = hotel1.ParqueDaFlores(diaDaSemana3, tipoCliente);
+        final double tarifa3h2 = hotel2.JardimBotanico(diaDaSemana3, tipoCliente);
+        final double tarifa3h3 = hotel3.MarAtlantico(diaDaSemana3, tipoCliente);
 
         System.out.println(tipoCliente+":" +data1.day+mesDoAno1+data1.year+"("+diaDaSemanaIngles1+"), "
                 +data2.day+mesDoAno2+data2.year+"("+diaDaSemanaIngles2+"), " +
                 ""+ data3.day+mesDoAno3+data3.year+"("+diaDaSemanaIngles3+")");
 
-        double tarifa1 = tarifa1h1+tarifa1h2+tarifa1h3;
-        double tarifa2 = tarifa2h1+tarifa2h2+tarifa2h3;
-        double tarifa3 = tarifa3h1+tarifa3h2+tarifa3h3;
+        final double tarifa1 = tarifa1h1+tarifa1h2+tarifa1h3;
+        final double tarifa2 = tarifa2h1+tarifa2h2+tarifa2h3;
+        final double tarifa3 = tarifa3h1+tarifa3h2+tarifa3h3;
 
-        if (tarifa1<tarifa2 && tarifa1<tarifa3){
+        if (tarifa1>tarifa2 && tarifa1>tarifa3){
             System.out.println("Parque das Flores");
-        } else if (tarifa2<tarifa1 && tarifa2<tarifa3){
+        } else if (tarifa2>tarifa1 && tarifa2>tarifa3){
             System.out.println("Jardim Botânico");
-        } else if (tarifa3<tarifa1 && tarifa3<tarifa2){
+        } else if (tarifa3>tarifa1 && tarifa3>tarifa2){
             System.out.println("Mar Atlântico");
 
         } else {

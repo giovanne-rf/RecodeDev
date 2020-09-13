@@ -13,6 +13,6 @@ public class DailyRate {
 
         Hotels parqueDaFlores = new Hotels();
         Customers cliente = new Customers();
-    }
+   }
 }
 

@@ -1,15 +1,17 @@
 public class Areas {
     final double pi = 3.14;
-    public double AreaCirculo (int raio){
-        double area=2*pi*raio;
+    public double AreaCirculo (final int raio) {
+        final double area = 2 * pi * raio;
         return area;
     }
-    public int AreaQuadrado (int lado){
-        int area = lado * lado;
+
+    public int AreaQuadrado(final int lado) {
+        final int area = lado * lado;
         return area;
     }
-     public int AreaTriangulo(int altura, int base){
-        int area = (base*altura)/2;
+
+    public int AreaTriangulo(final int altura, final int base) {
+        final int area = (base * altura) / 2;
         return area;
      }
 }
