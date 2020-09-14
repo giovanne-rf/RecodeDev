@@ -11,6 +11,10 @@ public class Days {
     int year;
     String DayOfweek;
 
+
+	
+
+
     public Days(int day, int month, int year) throws ParseException {
         this.day = day;
         this.month = month;
