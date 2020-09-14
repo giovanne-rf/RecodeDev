@@ -9,10 +9,5 @@ public class DailyRate {
         this.weekEndRate = weekEndRate;
     }
 
-    public void calculoTarifa(String dayOfWeek) {
-
-        Hotels parqueDaFlores = new Hotels();
-        Customers cliente = new Customers();
-   }
 }
 
