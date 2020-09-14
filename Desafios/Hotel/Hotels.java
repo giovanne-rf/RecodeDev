@@ -1,75 +1,64 @@
-public class Hotels {
+import java.text.ParseException;
+
+public class Hotels extends Days {
 
     String name;
     int rating;
-    double DailyRate;
-    
-    public double ParqueDaFlores (String dayOfWeek, String customerType){
-        name = "Parque da Flores";
-                rating = 3;
-        if (dayOfWeek.equalsIgnoreCase("sábado") || dayOfWeek.equalsIgnoreCase("domingo")){
-                if (customerType.equalsIgnoreCase("Regular")){
-                DailyRate = 90;
-                 } else if (customerType.equalsIgnoreCase("Fidelidade")){
-                DailyRate = 80;
-                }
-                // dias normais:
-        } else {
-            if (customerType.equalsIgnoreCase("Regular")){
-                DailyRate = 110;
-            } else if (customerType.equalsIgnoreCase("Fidelidade")){
-                DailyRate = 80;
-            }
-        }
-        return DailyRate;
+    double dailyRate=0.01;
+
+    public Hotels(int day, int month, int year) throws ParseException {
+        super(day, month, year);
     }
 
-    public double JardimBotanico (String dayOfWeek, String customerType){
-        name = "Jardim Botânico";
-        rating = 4;
-        if (dayOfWeek.equalsIgnoreCase("sábado") || dayOfWeek.equalsIgnoreCase("domingo")){
-            if (customerType.equalsIgnoreCase("Regular")){
-                DailyRate = 60;
-            } else if (customerType.equalsIgnoreCase("Fidelidade")){
-                DailyRate = 50;
+    public double priceParqueFlores(String isWeekEnd, String customerType) throws ParseException {
+        if (dayOfWeek(day, month, year).equalsIgnoreCase("Sat") || dayOfWeek(day, month, year).equalsIgnoreCase("Sun")) {
+            if (customerType.equalsIgnoreCase("Fidelidade")) {
+                dailyRate = 80;
+            } else {
+                dailyRate = 90;
             }
-            // dias normais:
+        } else
+            if (customerType.equalsIgnoreCase("Fidelidade")) {
+                dailyRate = 80;
         } else {
-            if (customerType.equalsIgnoreCase("Regular")){
-                DailyRate = 160;
-            } else if (customerType.equalsIgnoreCase("Fidelidade")){
-                DailyRate = 110;
-            }
-        }
-        return DailyRate;
-    }
+            dailyRate = 110;
+        };
 
-    public double MarAtlantico (String dayOfWeek, String customerType){
-        name = "Mar Atlântico";
-        rating = 5;
-        if (dayOfWeek.equalsIgnoreCase("sábado") || dayOfWeek.equalsIgnoreCase("domingo")){
-            if (customerType.equalsIgnoreCase("Regular")){
-                DailyRate = 150;
-            } else if (customerType.equalsIgnoreCase("Fidelidade")){
-                DailyRate = 40;
+        return dailyRate;
+    };
+
+    public double priceMarAtlantico(String isWeekEnd, String customerType) throws ParseException {
+        if (dayOfWeek(day, month, year).equalsIgnoreCase("Sat") || dayOfWeek(day, month, year).equalsIgnoreCase("Sun")) {
+            if (customerType.equalsIgnoreCase("Fidelidade")) {
+                dailyRate = 40;
+            } else {
+                dailyRate = 150;
             }
-            // dias normais:
+        } else
+            if (customerType.equalsIgnoreCase("Fidelidade")) {
+                dailyRate = 100;
         } else {
-            if (customerType.equalsIgnoreCase("Regular")){
-                DailyRate = 220;
-            } else if (customerType.equalsIgnoreCase("Fidelidade")){
-                DailyRate = 100;
-            }
-        }
-        return DailyRate;
-    }
+            dailyRate = 220;
+        };
 
-    @Override
-    public String toString() {
-        return "Hotels{" +
-                "nome='" + name + '\'' +
-                ", rating=" + rating +
-                ", DailyRate=" + DailyRate +
-                '}';
-    }
+        return dailyRate;
+    };
+
+    public double priceJardimBotanico(String isWeekEnd, String customerType) throws ParseException {
+        if (dayOfWeek(day, month, year).equalsIgnoreCase("Sat") || dayOfWeek(day, month, year).equalsIgnoreCase("Sun")) {
+            if (customerType.equalsIgnoreCase("Fidelidade")) {
+                dailyRate = 50;
+            } else {
+                dailyRate = 60;
+            }
+        } else
+            if (customerType.equalsIgnoreCase("Fidelidade")) {
+                dailyRate = 110;
+        } else {
+            dailyRate = 160;
+        };
+
+        return dailyRate;
+    };
+
 }

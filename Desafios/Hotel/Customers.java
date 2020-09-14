@@ -9,9 +9,9 @@ public class Customers {
 
     String customerType(int customerType){
 
-        if (customerType == 1){
+        if (customerType == 0){
             type = "Regular";
-        } else if (customerType == 2){
+        } else if (customerType==1){
             type = "Fidelidade";
         } else {
             type="vazia";
@@ -19,3 +19,4 @@ public class Customers {
         return type;
         }
 }
+
