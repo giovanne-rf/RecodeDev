@@ -7,11 +7,11 @@ import java.util.Date;
 
 public class Days {
 
-    int day;
-    int month;
-    int year;
-    String diaSemana;
-    Calendar bookingDate = null;
+    protected  int day;
+    protected int month;
+    protected int year;
+    protected String diaSemana;
+    protected Calendar bookingDate = null;
 
 
     public Days(int day, int month, int year) throws ParseException {
@@ -53,25 +53,8 @@ public class Days {
         return diaSemana;
     };
 
-    public String MonthOfYear(int day, int month, int year) throws ParseException {
-        String data = "" + day + month + year;
-        SimpleDateFormat DataFornecida = new SimpleDateFormat("ddMMyyyy");
-        Date date = DataFornecida.parse(data);
-        Date data2 = new Date(date.getTime());
-        DateFormat formato = new SimpleDateFormat("MMM");
-        return formato.format(data2);
-    }
-
-
     @Override
     public String toString() {
         return day + "/" + month + "/" + year;
     }
 }
-
-
-
-
-
-
-

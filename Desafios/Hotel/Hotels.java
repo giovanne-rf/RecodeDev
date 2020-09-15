@@ -2,9 +2,9 @@ import java.text.ParseException;
 
 public class Hotels extends Days {
 
-    String name;
-    int rating;
-    double dailyRate=0.01;
+    private String name;
+    private int rating;
+    private double dailyRate=0.01;
 
     public Hotels(int day, int month, int year) throws ParseException {
         super(day, month, year);

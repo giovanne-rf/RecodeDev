@@ -1,7 +1,7 @@
 public class Customers {
 
-    int customerType;
-    String type;
+    private int customerType;
+    private String type;
 
     public Customers() {
         this.customerType = customerType;
