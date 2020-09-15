@@ -27,7 +27,7 @@ public class Booking {
                         System.out.println("Data inválida!!!! Digite o dia da primeira data [ 1 - 31]: ");
                         day = entrada.nextInt();
                     }
-                    System.out.println("Registro realizado!: ");
+                    System.out.println("Registro realizado! ");
 
                     System.out.println(">>>> Agora digite o mês da primeira data [ 1 - 12]: ");
                     int month = entrada.nextInt();
@@ -35,7 +35,7 @@ public class Booking {
                         System.out.println(" !!! Mês INVÁLIDO !!! digite o mês da primeira data [ 1 - 12]: ");
                         month = entrada.nextInt();
                     }
-                    System.out.println("Registro realizado!: ");
+                    System.out.println("Registro realizado! ");
 
                     System.out.println(">>>> Agora digite o ano da primeira data: ");
                     int year = entrada.nextInt();
@@ -43,7 +43,7 @@ public class Booking {
                         System.out.println("!!! Ano INVÁLIDO !!! digite o ano maior ou igual que o atual: ");
                         year = entrada.nextInt();
                     }
-                    System.out.println("Registro realizado!: ");
+                    System.out.println("Registro realizado! ");
                     Days data1 = new Days(day, month, year);
 
         String diaDaSemana1 = data1.dayOfWeek(day, month, year);
