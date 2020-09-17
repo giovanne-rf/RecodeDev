@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AlunosMedias/AlunosMedias.iml" filepath="$PROJECT_DIR$/AlunosMedias/AlunosMedias.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AlunosMedias/CalculoAreas.iml" filepath="$PROJECT_DIR$/AlunosMedias/CalculoAreas.iml" />
       <module fileurl="file://$PROJECT_DIR$/RecodeDev.iml" filepath="$PROJECT_DIR$/RecodeDev.iml" />
     </modules>
   </component>
