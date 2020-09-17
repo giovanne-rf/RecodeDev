@@ -13,20 +13,20 @@ public class Booking {
 
         Customers cliente = new Customers();
         System.out.println("--------------------------------------------------------------------");
-        System.out.println("Digite o tipo de cliente da reserva [0 - Regular] / [1-Fidelidade]: ");
+        System.out.println("Digite o tipo de cliente da reserva [1 - Regular] / [1-Fidelidade]: ");
         String tipoCliente= cliente.customerType(entrada.nextInt());
 
-        while (!tipoCliente.equalsIgnoreCase("Regular") || !tipoCliente.equalsIgnoreCase("Regular")){
+        while (!tipoCliente.equalsIgnoreCase("Regular") && !tipoCliente.equalsIgnoreCase("Fidelidade")){
             System.out.println("Valor INVÁLIDO!!!! Digite o tipo de cliente da reserva [1 - Regular] / [2-Fidelidade]: ");
             tipoCliente= cliente.customerType(entrada.nextInt());
-        };
+        }
         System.out.println("--------------------------------------------------------------------");
         System.out.println("Você é um cliente tipo " + tipoCliente + ", vamos selecionar as datas de sua reserva: ");
         System.out.println("--------------------------------------------------------------------");
 
                 for (int i=0; i<=3; i++) {
-                    System.out.println("=============   PRIMEIRA DATA PARA RESERVA  =====================");
-                    System.out.println(">>>> Digite o dia da" +(i+1) + "º data [ 1 - 31]: ");
+                    System.out.println("=============   DATA PARA RESERVA  =====================");
+                    System.out.println(">>>> Digite o dia da " +(i+1) + "º data [ 1 - 31]: ");
                     int day = entrada.nextInt();
                     while (day<0 || day>31){
                         System.out.println("Data inválida!!!! Digite o dia da forma correta [ 1 - 31]: ");
@@ -66,4 +66,4 @@ public class Booking {
             entrada.close();
 
         }
-};
+}
