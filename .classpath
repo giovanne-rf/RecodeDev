@@ -4,5 +4,6 @@
 	<classpathentry kind="src" path="AlunosMedias/src"/>
 	<classpathentry kind="src" path="Desafios/DesafioAreas"/>
 	<classpathentry kind="src" path="Desafios/Hotel"/>
+	<classpathentry kind="src" path="Hotel/src"/>
 	<classpathentry kind="output" path="out/production/AlunosMedias"/>
 </classpath>
