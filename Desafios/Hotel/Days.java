@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Days {
 
-    protected  int day;
+    protected int day;
     protected int month;
     protected int year;
     protected String diaSemana;
