@@ -1,3 +1,5 @@
+import Calculo.Areas;
+
 import java.util.Scanner;
 
 public class CalculoAreas {
@@ -7,7 +9,7 @@ public class CalculoAreas {
         System.out.println("Informa o raio do círculo em m2: ");
         double raio = medida.nextDouble();
 
-        Areas circulo = new Areas(); // calculo da area do circulo usando a classe Areas
+        Areas circulo = new Areas(); // calculo da area do circulo usando a classe Calculo.Areas
         System.out.printf("A área do circulo é %.2f m2 ", circulo.AreaCirculo((int) raio));
         System.out.println ("");
 
