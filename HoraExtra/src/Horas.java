@@ -1,18 +1,43 @@
 public class Horas extends Ponto {
 
 
-    String ponto;
+    String ponto  = "<Domingo><08><18><120>";
     double coeficienteHoraExtra;
     private static final int HORAS_NORMAIS = 8;
     double valorHoraNormal = Double.parseDouble(ponto.substring(18, 21));
     double valorHoraExtra;
-    private int horasExtrasTrabalhadas;
+    int horasExtrasTrabalhadas;
     double valorHorasNormaisTrabalhadas;
     double valorTotalHoras;
 
     public Horas(String ponto) {
         super(ponto);
     }
+
+    public int horasTrabalhadas(int timeIn, int timeOut) {
+        int qtdHoras = timeOut - timeIn;
+        return qtdHoras;
+    }
+
+    public int horasExtrasTrabalhadas(int horasTrabalhadas) {
+        this.horasExtrasTrabalhadas = horasTrabalhadas - 8;
+        if (this.horasExtrasTrabalhadas < 0) {
+            this.horasExtrasTrabalhadas = 0;
+        }
+        return this.horasExtrasTrabalhadas;
+    }
+
+    public double calculoValorTotal(){
+        if (horasExtrasTrabalhadas == 0){
+            valorTotalHoras = HORAS_NORMAIS * diasSemana(diaSemana);
+        } else {
+            valorTotalHoras = (HORAS_NORMAIS * valorHoraNormal) + (horasExtrasTrabalhadas*(valorHoraNormal*diasSemana(diaSemana)));
+        }
+        return valorTotalHoras;
+    }
+
+
+
 
     public double getValorHoraNormal() {
         return valorHoraNormal;
@@ -32,18 +57,7 @@ public class Horas extends Ponto {
     }
 
 
-    public int horasTrabalhadas(int timeIn, int timeOut) {
-        int qtdHoras = timeOut - timeIn;
-        return qtdHoras;
-    }
 
-    public int horasExtrasTrabalhadas(int horasTrabalhadas) {
-        this.horasExtrasTrabalhadas = horasTrabalhadas - 8;
-        if (this.horasExtrasTrabalhadas < 0) {
-            this.horasExtrasTrabalhadas = 0;
-        }
-        return this.horasExtrasTrabalhadas;
-    }
 
 
     public double diasSemana(String diaSemana) {
