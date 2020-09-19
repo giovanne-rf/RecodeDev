@@ -1,14 +1,16 @@
 public class Horas extends Ponto {
 
 
-    String ponto  = "<Domingo><08><18><120>"; // variável declarada apenas para evitar o nullpoint exception.
+    String ponto  = "Sexta 08 18 120"; // variável declarada apenas para evitar o nullpoint exception.
+    String [] entradaSplit = ponto.split(" ");
     double coeficienteHoraExtra;
     private static final int HORAS_NORMAIS = 8;
-    double valorHoraNormal = Double.parseDouble(ponto.substring(18, 21)); // Quando esvazio o variável 'ponto' recebo um nullpoint exception, porquê?
+    double valorHoraNormal = Double.parseDouble(entradaSplit[3]); // Quando esvazio o variável 'ponto' recebo um nullpoint exception, porquê?
     double valorHoraExtra;
     int horasExtrasTrabalhadas;
     double valorHorasNormaisTrabalhadas;
     double valorTotalHoras;
+
 
     public Horas(String ponto) {
         super(ponto);

@@ -6,7 +6,7 @@ class inputNotas {
 
     public static void main(String[] args) {
 
-        Alunos aluno = new Alunos("Giovanne", 8, 9);
+        Alunos aluno = new Alunos("Giovanne", 3, 9);
 
         System.out.println("Nota 1: "+ aluno.nota1);
         System.out.println("Nota 2: " +aluno.nota2);

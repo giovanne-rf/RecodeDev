@@ -57,9 +57,9 @@ public class Booking {
                     Hotels hotel3 = new Hotels(day, month, year);
 
                     System.out.println(tipoCliente+": " +
-                            "R$"+hotel1.priceJardimBotanico(diaDaSemana1, tipoCliente)+ ", " +
+                            "R$" + hotel1.priceJardimBotanico(diaDaSemana1, tipoCliente)+ ", " +
                             "R$ "+ hotel2.priceMarAtlantico(diaDaSemana1, tipoCliente)+", " +
-                            "R$ "+hotel3.priceParqueFlores(diaDaSemana1, tipoCliente) +")");
+                            "R$ "+ hotel3.priceParqueFlores(diaDaSemana1, tipoCliente) +")");
                     System.out.println("Dia da semana"+": ("+diaDaSemana1+")");
         }
 

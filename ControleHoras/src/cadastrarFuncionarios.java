@@ -31,11 +31,5 @@ public class cadastrarFuncionarios  extends Funcionarios {
                 ", funcao='" + funcao;
     }
 
-    //            System.out.println(" Nome: " + listaFuncionarios.get(0));
-//            System.out.println(" CPF: " + listaFuncionarios.get(1));
-//            System.out.println(" Matrícula: " + funcionarios.get(2));
-//            System.out.println(" Função: " + funcionarios.get(3));
-//            System.out.println(" Salário: " + funcionarios.get(4));
-//            System.out.println(" Jornada: " + funcionarios.get(5));
-        }
+}
 

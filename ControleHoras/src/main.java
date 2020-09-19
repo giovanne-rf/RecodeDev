@@ -31,21 +31,42 @@ public class main {
         System.out.println("------------------------==================================----------------");
         funcionario5.getDadosFuncionario();
 
+        System.out.println("------------------------==================================--------------------------------");
+        System.out.println("------------------------==================================--------------------------------");
+
+        Ponto ponto1 = new Ponto("Giovanne José Alves Pereira","008.081.034-90",
+                "28.282-D", "Advogado", 4500, 8);
+        ponto1.anoIn=2020;
+        ponto1.mesIn=9;
+        ponto1.diaIn=19;
+        ponto1.horaIn=8;
+        ponto1.minIn=0;
+        ponto1.anoOut=2020;
+        ponto1.mesOut=9;
+        ponto1.diaOut=19;
+        ponto1.horaOut=22;
+        ponto1.mesOut=0;
 
 
+
+        System.out.println(ponto1.nomeCompleto);
+        System.out.println(ponto1.dataIn);
+        System.out.println(ponto1.dataOut);
+        System.out.println(ponto1.horasTrabalhadas);
+        System.out.println(ponto1.horasExtrasTrabalhadas);
 
         System.out.println("------------------------==================================--------------------------------");
 
-        DateTime dataInicial = new DateTime(2012, 12, 1, 9, 23);
-        DateTime dataFinal = new DateTime(2012, 12, 1, 14, 5);
-        DateTime feriado = new DateTime(2012, 12, 25, 12, 0);
+        DateTime dataIn = new DateTime(2020, 9, 19, 20, 23);
+        DateTime dataOut = new DateTime(2020, 9, 20, 8, 15);
 
-        int dias = Days.daysBetween(dataInicial, dataFinal).getDays();
-        int horas = Hours.hoursBetween(dataInicial, dataFinal).getHours();
-        int minutos = Minutes.minutesBetween(dataInicial, dataFinal).getMinutes();
+        int dias = Days.daysBetween(dataIn, dataOut).getDays();
+        int horas = Hours.hoursBetween(dataIn, dataOut).getHours();
+        int minutos = Minutes.minutesBetween(dataIn, dataOut).getMinutes();
         double minutosResto = minutos-(horas*60);
 
 
+        System.out.println(dataIn);
         System.out.println(horas);
         System.out.println(minutos);
         System.out.println(minutosResto);
