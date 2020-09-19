@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AlunosMedias/AlunosMedias.iml" filepath="$PROJECT_DIR$/AlunosMedias/AlunosMedias.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Banco/Banco.iml" filepath="$PROJECT_DIR$/Banco/Banco.iml" />
-      <module fileurl="file://$PROJECT_DIR$/AlunosMedias/CalculoAreas.iml" filepath="$PROJECT_DIR$/AlunosMedias/CalculoAreas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ControleHoras/ControleHoras.iml" filepath="$PROJECT_DIR$/ControleHoras/ControleHoras.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ControleHorasEasy/ControleHorasEasy.iml" filepath="$PROJECT_DIR$/ControleHorasEasy/ControleHorasEasy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hotel/Hotel.iml" filepath="$PROJECT_DIR$/Hotel/Hotel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HotelCompleto/HotelCompleto.iml" filepath="$PROJECT_DIR$/HotelCompleto/HotelCompleto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Joda/Joda.iml" filepath="$PROJECT_DIR$/Joda/Joda.iml" />
       <module fileurl="file://$PROJECT_DIR$/RecodeDev.iml" filepath="$PROJECT_DIR$/RecodeDev.iml" />
-      <module fileurl="file://$PROJECT_DIR$/untitled/untitled.iml" filepath="$PROJECT_DIR$/untitled/untitled.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SistemaEscolar/SistemaEscolar.iml" filepath="$PROJECT_DIR$/SistemaEscolar/SistemaEscolar.iml" />
     </modules>
   </component>
 </project>
