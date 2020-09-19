@@ -1,5 +1,7 @@
 public enum DiaSemana {
 
+    // ESSA CLASSE NÃO FOI UTILIZADA - PRECISO MELHORAR O USO DO ENUM
+
     Domingo (2),
     Segunda (1.5),
     Terça (1.5),

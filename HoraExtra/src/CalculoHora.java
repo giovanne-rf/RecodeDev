@@ -2,7 +2,7 @@ public class CalculoHora {
 
     public static void main(String[] args) {
 
-        String ponto = "<Domingo><08><18><120>";
+        String ponto = "<Domingo><08><18><120>"; // Da forma como foi posta a questão a entrada com tratamento de String só aceita este texto. Se mudar encontro erro.
 
         Horas horas1 =  new Horas(ponto);
         Ponto ponto1 = new Ponto(ponto);
