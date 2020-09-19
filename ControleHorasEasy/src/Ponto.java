@@ -8,9 +8,10 @@ public class Ponto {
 
     public Ponto(String ponto) {
         this.ponto = ponto;
-        diaSemana = ponto.substring(1, 8);
-        timeIn =Integer.parseInt(ponto.substring(10, 12));
-        timeOut =Integer.parseInt(ponto.substring(14, 16));
+        String [] entradaSplit = ponto.split(" ");
+        diaSemana = entradaSplit[0];
+        timeIn =Integer.parseInt(entradaSplit[1]);
+        timeOut =Integer.parseInt(entradaSplit[2]);
     }
 
     public String getPonto() {
@@ -28,7 +29,6 @@ public class Ponto {
     public int getTimeIn() {
         return timeIn;
     }
-
 
     public int getTimeOut() {
         return timeOut;
