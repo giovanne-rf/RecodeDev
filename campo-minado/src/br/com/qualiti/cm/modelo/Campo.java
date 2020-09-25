@@ -1,6 +1,6 @@
 package br.com.qualiti.cm.modelo;
 
-import br.com.qualiti.cm.excecao.explosaoException;
+import br.com.qualiti.cm.excecao.ExplosaoException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +52,7 @@ public class Campo {
         if (!aberto && !marcado){
             aberto = true;
             if (minado){
-                throw new explosaoException();
+                throw new ExplosaoException();
             }
             if (vizinhancaSegura()){
                 vizinhos.forEach(v-> v.abrir());
@@ -69,5 +69,18 @@ public class Campo {
 
     public boolean isMarcado (){
         return marcado;
+    }
+
+    void minar (){
+        if (!minado){
+            minado = true;
+        }
+    }
+
+    public boolean isAberto(){
+        return aberto;
+    }
+    public boolean isFechado(){
+        return !aberto;
     }
 }
