@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/Joda/Joda.iml" filepath="$PROJECT_DIR$/Joda/Joda.iml" />
       <module fileurl="file://$PROJECT_DIR$/RecodeDev.iml" filepath="$PROJECT_DIR$/RecodeDev.iml" />
       <module fileurl="file://$PROJECT_DIR$/SistemaEscolar/SistemaEscolar.iml" filepath="$PROJECT_DIR$/SistemaEscolar/SistemaEscolar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/campo-minado/campo-minado.iml" filepath="$PROJECT_DIR$/campo-minado/campo-minado.iml" />
     </modules>
   </component>
 </project>
