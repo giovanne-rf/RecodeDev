@@ -54,5 +54,16 @@ class CampoTest {
         assertFalse(resultado);
     }
 
+    @Test
+    void MarcacaoPadrao (){
+        assertFalse(campo.isMarcado());
+    }
+
+    @Test
+    void alternarMarcacao (){
+        campo.alternarMarcacao();
+        assertTrue(campo.isMarcado());
+    }
+
 
 }
