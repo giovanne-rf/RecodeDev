@@ -4,6 +4,8 @@ import br.com.qualiti.cm.excecao.ExplosaoException;
 import br.com.qualiti.cm.excecao.SairException;
 import br.com.qualiti.cm.modelo.Tabuleiro;
 
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class TabuleiroConsole {
@@ -41,11 +43,36 @@ public class TabuleiroConsole {
 
     private void cicloDoJogo() {
         try{
+            while (!tabuleiro.objetivoAlcancado()){
+                System.out.println(tabuleiro);
+                String digitado =capturarValorDigitado("Digite (x, Y)");
+                Iterator<Integer> xy = Arrays.stream(digitado.split(","))
+                        .map(e->Integer.parseInt(e.trim())).iterator();
+
+                digitado =capturarValorDigitado("1 para Abrir  ou 2 para (des)Marcar: ");
+                if ("1".equalsIgnoreCase(digitado)){
+                    tabuleiro.abrir(xy.next(), xy.next());
+                } else if ("2".equalsIgnoreCase(digitado)){
+                    tabuleiro.alterarMarcacao(xy.next(), xy.next());
+                }
+
+
+            }
+                System.out.println("Voce ganhou o jogo");
 
         } catch (ExplosaoException e){
-            System.out.println("Você");
+            System.out.println(tabuleiro);
+            System.out.println("Você perdeu o jogo!");
         }
+    }
+    private String capturarValorDigitado (String texto){
+        System.out.print(texto);
+        String digitado = entrada.nextLine();
 
+        if ("sair".equalsIgnoreCase(digitado)){
+            throw new SairException();
+        }
+        return digitado;
     }
 
 

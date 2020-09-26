@@ -1,5 +1,7 @@
 package br.com.qualiti.cm.modelo;
 
+import br.com.qualiti.cm.excecao.ExplosaoException;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -20,10 +22,16 @@ public class Tabuleiro {
     }
 
     public void abrir (int linha, int coluna){
-        campos.parallelStream()
-                .filter(c->c.getLinha() == linha && c.getColuna() == coluna)
-                .findFirst()
-                .ifPresent(c->c.abrir());
+        try{
+            campos.parallelStream()
+                    .filter(c->c.getLinha() == linha && c.getColuna() == coluna)
+                    .findFirst()
+                    .ifPresent(c->c.abrir());
+        } catch (ExplosaoException e){
+            campos.forEach(c->c.setAberto(true));
+            throw e;
+        }
+
     }
 
     public void alterarMarcacao (int linha, int coluna){
@@ -53,9 +61,9 @@ public class Tabuleiro {
         long minhasArmadas = 0;
         Predicate<Campo> minado = c-> c.isMinado();
         do {
-            minhasArmadas = campos.stream().filter(minado).count();
             int aleatorio =(int) (Math.random()* campos.size()); // * PRIORIDADE DO CAST
             campos.get(aleatorio).minar();
+            minhasArmadas = campos.stream().filter(minado).count();
         } while (minhasArmadas<minas);
     }
 
@@ -70,8 +78,21 @@ public class Tabuleiro {
 
     public String toString (){
         StringBuilder sb = new StringBuilder();
+
+        sb.append(" ");
+        sb.append(" ");
+        for(int c= 0; c<colunas; c++){
+            sb.append(" ");
+            sb.append(c);
+            sb.append(" ");
+        }
+            sb.append("\n");
+
         int i = 0;
         for (int l = 0; l<linhas; l++){
+            sb.append(" ");
+            sb.append(l);
+
             for (int c = 0; c<colunas; c++){
                 sb.append(" ");
                 sb.append(campos.get(i));
