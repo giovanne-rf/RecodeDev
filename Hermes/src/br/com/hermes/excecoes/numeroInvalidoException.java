@@ -11,7 +11,8 @@ public class numeroInvalidoException extends RuntimeException{
 
     @Override
     public String getMessage() {
-        return String.format("O numero do processso '%s' está incorreto!" ,
+        return String.format("Processso '%s' inválido, verifique o formato " +
+                        "correto - 1234567-12.1234.1.12.1234" ,
                 numeroProcesso);
     }
 }

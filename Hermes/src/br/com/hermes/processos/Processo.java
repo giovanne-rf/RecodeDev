@@ -13,17 +13,17 @@ public class Processo {
     private String ano;
     private String jurisdicao ;
     private String tribunal ;
-    private String vara ;
+    private String vara;
 
     public Processo(String numero) {
-//        if (numero.length()<25){
-//            throw new numeroInvalidoException(numero);
-//        }
+        if (numero.length()<25 | numero.length()>25){
+           throw new numeroInvalidoException(numero);
+       }
         this.numero = numero;
-//        this.ano = numero.substring(11, 15);
-//        this.jurisdicao = numero.substring(16,17);
-//        this.tribunal = numero.substring(18,20);
-//        this.vara = numero.substring(21,25);
+        this.ano = numero.substring(11, 15);
+        this.jurisdicao = numero.substring(16,17);
+        this.tribunal = numero.substring(18,20);
+        this.vara = numero.substring(21,25);
     }
 
     public String getNumero() {

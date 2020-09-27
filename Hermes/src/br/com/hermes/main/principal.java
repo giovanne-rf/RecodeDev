@@ -8,8 +8,7 @@ public class principal {
 
     public static void main(String[] args) {
         try {
-            Processo processo = new Processo ("000451-10.2020.6.06.0001");
-            validarProcesso.processo(processo);
+            Processo processo = new Processo ("00000451-10.2020.6.06.0001");
             System.out.println(processo.getNumero());
             System.out.println(processo.getAno());
             System.out.println(processo.getJurisdicao());
