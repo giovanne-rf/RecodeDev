@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/ControleHoras/ControleHoras.iml" filepath="$PROJECT_DIR$/ControleHoras/ControleHoras.iml" />
       <module fileurl="file://$PROJECT_DIR$/ControleHorasEasy/ControleHorasEasy.iml" filepath="$PROJECT_DIR$/ControleHorasEasy/ControleHorasEasy.iml" />
       <module fileurl="file://$PROJECT_DIR$/GerenciadorTimesFutebol/GerenciadorTimesFutebol.iml" filepath="$PROJECT_DIR$/GerenciadorTimesFutebol/GerenciadorTimesFutebol.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hermes/Hermes.iml" filepath="$PROJECT_DIR$/Hermes/Hermes.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hotel/Hotel.iml" filepath="$PROJECT_DIR$/Hotel/Hotel.iml" />
       <module fileurl="file://$PROJECT_DIR$/HotelCompleto/HotelCompleto.iml" filepath="$PROJECT_DIR$/HotelCompleto/HotelCompleto.iml" />
       <module fileurl="file://$PROJECT_DIR$/Joda/Joda.iml" filepath="$PROJECT_DIR$/Joda/Joda.iml" />

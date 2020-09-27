@@ -125,6 +125,4 @@ class CampoTest {
         assertTrue(campo22.isAberto() && campo11.isFechado());
     };
 
-
-
 }

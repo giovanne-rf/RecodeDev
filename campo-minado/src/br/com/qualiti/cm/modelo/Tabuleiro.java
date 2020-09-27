@@ -102,9 +102,5 @@ public class Tabuleiro {
             sb.append("\n");
         }
         return sb.toString();
-
     }
-
-
-
 }
