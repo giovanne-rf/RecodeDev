@@ -7,9 +7,10 @@ public class validarProcesso {
 
     private validarProcesso(){};
 
-    public static void processo (Processo processo){
-        if (processo.getNumero().length() <25 || processo.getNumero().length()>25){
-            throw new numeroInvalidoException(processo.getNumero());
+    public static void processo (String processo){
+
+        if (processo.length() <25 || processo.length()>25){
+            throw new numeroInvalidoException(processo);
         }
     }
 }
