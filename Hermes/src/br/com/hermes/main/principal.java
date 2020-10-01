@@ -20,8 +20,8 @@ public class principal {
         System.out.println(lista.get(2));
 
         for (Processo p: lista){
-            System.out.println(p.autores);
-            System.out.println(p.ano);
+            System.out.println("Autor "+p.autores);
+            System.out.println("Ano da distribuição: " + p.ano);
         }
 
 
