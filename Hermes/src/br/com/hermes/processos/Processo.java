@@ -18,7 +18,7 @@ public class Processo {
     @Override
     public String toString() {
         return "Processo nº" + numero + '\'' +
-                ", autores='" + autores + '\'' +
-                '}';
+                ", autores: '" + autores + '\'' +
+                '.';
     }
 }
