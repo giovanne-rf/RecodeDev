@@ -3,12 +3,16 @@ package br.com.hermes.main;
 import br.com.hermes.processos.Processo;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class principal {
 
     public static void main(String[] args) {
 
         String numeroProcesso =  "0002563-20.2020.5.06.0001";
+       String[] processo = new ArrayList<>();
+        processo.add(numeroProcesso.split("."));
 
         ArrayList<Processo> lista = new ArrayList<Processo>();
         lista.add(new Processo("0002563-20.2020.5.06.0001", "Giovanne Alves"));
@@ -18,6 +22,7 @@ public class principal {
         System.out.println(lista);
         System.out.println(lista.get(2));
         System.out.println(lista.get(2));
+        System.out.println(Arrays.toString(processo.get(0)));
 
         for (Processo p: lista){
             System.out.println("Autor:  "+p.autores + "ano da distribuição: "+ p.ano);
