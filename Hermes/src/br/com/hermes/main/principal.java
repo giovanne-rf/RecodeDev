@@ -11,8 +11,8 @@ public class principal {
     public static void main(String[] args) {
 
         String numeroProcesso =  "0002563-20.2020.5.06.0001";
-       String[] processo = new ArrayList<>();
-        processo.add(numeroProcesso.split("."));
+        List<String> processo = new ArrayList<>();
+        processo.add(String.valueOf(numeroProcesso.split(".")));
 
         ArrayList<Processo> lista = new ArrayList<Processo>();
         lista.add(new Processo("0002563-20.2020.5.06.0001", "Giovanne Alves"));
@@ -22,10 +22,10 @@ public class principal {
         System.out.println(lista);
         System.out.println(lista.get(2));
         System.out.println(lista.get(2));
-        System.out.println(Arrays.toString(processo.get(0)));
+        System.out.println(processo.get(0));
 
         for (Processo p: lista){
-            System.out.println("Autor:  "+p.autores + "ano da distribuição: "+ p.ano);
+            System.out.println("Autor:  "+p.autores + " ano da distribuição: "+ p.ano);
         }
 
 
