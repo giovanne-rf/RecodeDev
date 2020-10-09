@@ -13,7 +13,7 @@ public class Booking {
 
         Customers cliente = new Customers();
         System.out.println("--------------------------------------------------------------------");
-        System.out.println("Digite o tipo de cliente da reserva [1 - Regular] / [1-Fidelidade]: ");
+        System.out.println("Digite o tipo de cliente da reserva [1 - Regular] / [2-Fidelidade]: ");
         String tipoCliente= cliente.customerType(entrada.nextInt());
 
         while (!tipoCliente.equalsIgnoreCase("Regular") && !tipoCliente.equalsIgnoreCase("Fidelidade")){
