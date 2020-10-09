@@ -6,7 +6,5 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        gerenciadorTime novoTime = new gerenciadorTime();
-        novoTime.buscarTimes();
     }
 }

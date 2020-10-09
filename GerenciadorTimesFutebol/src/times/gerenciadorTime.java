@@ -4,6 +4,7 @@ import MeuTimeInterface.MeuTimeInterface;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class gerenciadorTime implements MeuTimeInterface {
@@ -21,17 +22,17 @@ public class gerenciadorTime implements MeuTimeInterface {
     BigDecimal salario;
     Boolean capitao;
 
+
+
     @Override
     public void incluirTime(Long id,
                             String nome,
                             LocalDate dataCriacao,
                             String corUniformePrincipal,
                             String corUniformeSecundario) {
-        this.idTime =  id;
-        this.nomeTime = nome;
-        this.dataCriacao=dataCriacao;
-        this.corUniformePrincipal = corUniformePrincipal;
-        this.corUniformeSecundario = corUniformeSecundario;
+
+        Equipe equipeNova = new Equipe(id, nome, dataCriacao, corUniformePrincipal, corUniformeSecundario);
+        equipeNova.equipe.add(equipeNova);
     }
 
     @Override
@@ -51,6 +52,7 @@ public class gerenciadorTime implements MeuTimeInterface {
 
     @Override
     public void definirCapitao(Long idJogador) {
+            this.capitao = true;
 
     }
 
