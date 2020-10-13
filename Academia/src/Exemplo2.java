@@ -10,7 +10,7 @@ public class Exemplo2 {
 
         if(priNum1 == priNum2)
         {
-            System.out.println("priNum1 diferente de priNum2");
+            System.out.println("priNum1 igual de priNum2");
         }else
         {
             System.out.println("priNum1 diferente do priNum2");
