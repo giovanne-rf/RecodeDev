@@ -10,7 +10,7 @@ public class CaixasJava2 {
             JOptionPane.showMessageDialog(null, "O numero é " + numero);
 
         } catch (NumberFormatException e){
-            System.out.println("Digite apenas números");
+            JOptionPane.showMessageDialog(null, "Digite apenas numeros");
         }
     }
 }
