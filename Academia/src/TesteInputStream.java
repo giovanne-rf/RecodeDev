@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.sql.SQLOutput;
 
 public class TesteInputStream {
     public static void main(String[] args) {
@@ -9,7 +8,7 @@ public class TesteInputStream {
             System.in.read(mbyte);
             String mString = new String (mbyte).trim();
             int idade = Integer.parseInt(mString);
-            System.out.println("Idade convertida em int" + idade);
+            System.out.println("Idade convertida em int: " + idade);
         } catch (NumberFormatException | IOException e) {
             System.out.println("Erro de conversao");;
         }
