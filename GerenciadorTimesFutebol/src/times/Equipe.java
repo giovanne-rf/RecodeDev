@@ -11,7 +11,7 @@ public class Equipe<Equipe> {
     private LocalDate dataCriacao;
     private String corUniformePrincipal;
     private String corUniformeSecundario;
-    List<times.Equipe> equipe = new ArrayList<>();
+    List<Equipe> equipe = new ArrayList<>();
 
     public Equipe(Long idTime,
                   String nomeTime,
