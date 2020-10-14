@@ -14,12 +14,10 @@ public class Arrays {
         }
 
         for (int k=0; k<vetor.length; k++){
-            System.out.print(vetor[k]);
-            System.out.println(" ");
-            for (int l=0; l<vetorB.length; l++){
+            System.out.println(vetor[k] + " ");
 
-                System.out.print(vetorB[l]);
-                System.out.println(" ");
+            for (int l=0; l<vetorB.length; l++){
+                System.out.print(vetorB[l] + " ");
             }
 
             }
