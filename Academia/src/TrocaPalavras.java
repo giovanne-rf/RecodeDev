@@ -10,5 +10,7 @@ public class TrocaPalavras {
 
         System.out.println(frase.replace(troca, novaparte));
 
+        String nome = JOptionPane.showInputDialog("Digite seu nome: ");
+
     }
 }
