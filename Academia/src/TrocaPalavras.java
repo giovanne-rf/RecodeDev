@@ -2,6 +2,8 @@ import javax.swing.*;
 
 public class TrocaPalavras {
 
+
+
     public static void main(String[] args) {
 
         String frase = JOptionPane.showInputDialog("Digite a frase: ");

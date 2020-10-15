@@ -1,1 +1,0 @@
-Crie um programa que leia seu nome e imprima-o na ordem invertida. Exemplo bonito: Marcos - socraM
