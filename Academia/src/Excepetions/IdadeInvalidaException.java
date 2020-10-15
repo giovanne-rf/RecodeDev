@@ -1,5 +1,7 @@
 package Excepetions;
 
+import javax.swing.*;
+
 public class IdadeInvalidaException extends Exception{
 
     public IdadeInvalidaException (String mensagem){
@@ -8,7 +10,7 @@ public class IdadeInvalidaException extends Exception{
     }
 
     public void print (){
-        System.out.println(" -- IdadeInvalidaException -- ");
+        JOptionPane.showMessageDialog(null, "Você digitou mensagem fora do intervalo");
         System.out.println(getMessage());
         System.out.println(" -- IdadeInvalidaException -- ");
     }

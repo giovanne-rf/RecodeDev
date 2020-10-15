@@ -24,6 +24,6 @@ public class FaixaEtaria {
                 } else if (idade>61){
                     faixaEtaria= "Idoso";
                 }
-        System.out.println(nome + " tem " + idade + " anos  e sua faixa etária é: "+ faixaEtaria);
+        JOptionPane.showMessageDialog(null, nome + " tem " + idade + " anos  e sua faixa etária é: "+ faixaEtaria);
     }
 }
