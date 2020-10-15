@@ -1,3 +1,5 @@
+package Strings;
+
 import javax.swing.*;
 
 public class Strings {

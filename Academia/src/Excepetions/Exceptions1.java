@@ -1,3 +1,5 @@
+package Excepetions;
+
 import javax.swing.*;
 
 public class Exceptions1 {

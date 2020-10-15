@@ -1,3 +1,5 @@
+package Excepetions;
+
 public class Exceptions2 {
 
     public static void main(String[] args) {
@@ -10,6 +12,9 @@ public class Exceptions2 {
 
         } catch (ArrayIndexOutOfBoundsException e){
             System.out.println("Index fora da borda");
+        }
+        finally {
+            System.out.println("Execução independente a ser gerada.");
         }
 
 

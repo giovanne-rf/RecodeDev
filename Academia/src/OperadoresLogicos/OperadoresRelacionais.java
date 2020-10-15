@@ -1,3 +1,5 @@
+package OperadoresLogicos;
+
 public class OperadoresRelacionais {
     public static void main(String[] args) {
         int it1 = 10, it2 = 15, it3 = 10, it4 = 15;
