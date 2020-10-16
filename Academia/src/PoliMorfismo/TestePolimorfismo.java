@@ -12,7 +12,6 @@ public class TestePolimorfismo {
         } else {
             b = new Gato();
         }
-
         b.fala();
     }
 }
