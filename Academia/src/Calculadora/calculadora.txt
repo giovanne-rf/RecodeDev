@@ -1,0 +1,3 @@
+Faça um programa em Java para implementar uma calculadora simples com as quatro operações básicas da matemática.
+Crie três métodos para cada uma das operações e cada método deverá ser sobrecarregado, pois um deles deve receber apenas dois parâmetros do tipo int, o outro apenas dois parâmetros do tipo float e o último apenas dois parâmetros do tipo String.
+Quando os parâmetros forem do tipo String, os mesmos deverão ser convertidos para o tipo int.
