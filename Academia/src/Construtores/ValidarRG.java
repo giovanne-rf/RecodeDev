@@ -4,7 +4,7 @@ package Construtores;
 public class ValidarRG {
     public static void main(String[] args) {
 
-        String rg = "25636890-5";
+        String rg = "15237221-0";
         String[] digito = rg.split("-");
         int numero = Integer.parseInt(digito[0]);
         int soma = 0;
@@ -25,6 +25,7 @@ public class ValidarRG {
         } else {
             System.out.println("RG incorreto");
         }
+        // 152372210
 
     }
 }
