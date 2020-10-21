@@ -1,20 +1,18 @@
 package GerenciadoresLayout;
 
-
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
-import javax.swing.*;
+public class Login extends ModeloJFrame implements ItemListener, ActionListener  {
 
-public class CadastroModelo extends ModeloJFrame implements ItemListener, ActionListener {
     JTextField cpf, cpfDigito, rg, rgDigito, nome, nascimento, profissao, situacao;
     JComboBox<String> sexo, falecido;
 
-    public CadastroModelo (String title)
-    {
+    public Login (String title) {
         setTitle(title);
         int largura=1000, altura=400;
         setSize(largura, altura);
@@ -72,15 +70,16 @@ public class CadastroModelo extends ModeloJFrame implements ItemListener, Action
         situacao = criarJTextField(x+=90, y, largura-x, a);
         add(situacao);
     }
+
     public static void main(String[] args)
     {
         String title;
-        title = "Atualiza Dados Cadastrais";
-        CadastroModelo janela = new CadastroModelo(title);
+        title = "LOGIN";
+        Login janela = new Login(title);
         //janela.setVisible(true);
     }
-    public JLabel criarJLabel(String label, int left, int top, int w, int h)
-    {
+
+    public JLabel criarJLabel(String label, int left, int top, int w, int h) {
         JLabel jl = new JLabel();
         jl.setText(label);
         jl.setLocation(left, top);
@@ -90,36 +89,30 @@ public class CadastroModelo extends ModeloJFrame implements ItemListener, Action
         jl.setToolTipText(label);
         return jl;
     }
-    public JTextField criarJTextField(int left, int top, int w, int h)
-    {
+    public JTextField criarJTextField(int left, int top, int w, int h) {
         JTextField jt = new JTextField();
         jt.setHorizontalAlignment(JTextField.LEFT);
         jt.setBounds(left, top, w, h);
         return jt;
     }
 
-    public JComboBox<String> criarJComboBox(int left, int top, int w, int h)
-    {
+    public JComboBox<String> criarJComboBox(int left, int top, int w, int h) {
         JComboBox<String> jt = new JComboBox<>();
         jt.setBounds(left, top, w, h);
         return jt;
     }
 
-    public void actionPerformed(ActionEvent e)
-    {
+    public void actionPerformed(ActionEvent e) {
 
     }
 
-    public void itemStateChanged(ItemEvent e)
-    {
-        if (e.getSource() == sexo)
-        {
-            System.out.println("Selecionado: "+ sexo.getSelectedItem());
+    public void itemStateChanged(ItemEvent e) {
+        if (e.getSource() == sexo) {
+            System.out.println("Selecionado: " + sexo.getSelectedItem());
             System.out.println(e.getStateChange());
-        }
-        else if (e.getSource() == falecido)
-        {
-            System.out.println("Selecionado: "+ falecido.getSelectedItem());
+        } else if (e.getSource() == falecido) {
+            System.out.println("Selecionado: " + falecido.getSelectedItem());
         }
     }
+
 }
