@@ -1,4 +1,4 @@
-package Construtores;
+package Validacao;
 
 
 public class ValidarRG {

@@ -1,3 +1,4 @@
+package Validacao;
 
 import java.util.Scanner;
 
@@ -13,7 +14,7 @@ public class Validador {
         CPF = ler.next();
 
         System.out.printf("\nResultado: ");
-        // usando os metodos isCPF() e imprimeCPF() da classe "ValidaCPF"
+        // usando os metodos isCPF() e imprimeCPF() da classe "Validacao.ValidaCPF"
         if (ValidaCPF.isCPF(CPF) == true)
             System.out.printf("%s\n", ValidaCPF.imprimeCPF(CPF));
         else
