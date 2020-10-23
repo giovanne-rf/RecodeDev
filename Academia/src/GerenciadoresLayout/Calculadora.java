@@ -17,19 +17,19 @@ public class Calculadora extends JFrame implements ItemListener {
 
     public static void main(String args[]) {
 
-        new PaineisBotoesTexto ();
+        new Calculadora ();
     }
 
     Calculadora() {
-        setTitle("Uso de botoes de Radio ");
-        setSize(340,150);
+        setTitle("Calculadora");
+        setSize(400,400);
         getContentPane().setLayout(new FlowLayout(FlowLayout.CENTER));
         l1 = new JLabel("Digite um valor");
         l1.setForeground(Color.blue);
         l2 = new JLabel("% do Valor :");
         l2.setForeground(Color.blue);
-        t1 = new JTextField(5);
-        t2 = new JTextField(5);
+        t1 = new JTextField(10);
+        t2 = new JTextField(10);
         p1 = new JPanel();
         p2 = new JPanel();
         t2.setEditable(false);
@@ -49,11 +49,16 @@ public class Calculadora extends JFrame implements ItemListener {
         p1.setLayout(new FlowLayout(FlowLayout.CENTER));
         p1.setBackground(new Color(200,200,200));
         p2.setLayout(new GridLayout(2,3));
-        p2.setBackground(new Color(200,200,200));
-        p1.add(l1);     p1.add(t1);
-        p2.add(radio1); p2.add(radio2); p2.add(radio3);
-        p2.add(l2);     p2.add(t2);
-        getContentPane().add(p1);  getContentPane().add(p2);
+        p2.setBackground(new Color(200,200,0));
+        p1.add(t1);
+        p1.add(l1);
+        p2.add(radio1);
+        p2.add(radio2);
+        p2.add(radio3);
+        p2.add(l2);
+        p2.add(t2);
+        getContentPane().add(p1);
+        getContentPane().add(p2);
         setVisible(true);
         setLocationRelativeTo(null);
     }
