@@ -1,7 +1,13 @@
 package GerenciadoresLayout;
-import java.awt.*; 	import java.awt.event.*;		import javax.swing.*;
-public class PaineisBotoesTexto extends JFrame implements ItemListener
-{
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import java.awt.event.KeyEvent;
+
+public class Calculadora extends JFrame implements ItemListener {
+
     JLabel l1,l2;
     float N1=0,result=0;
     JTextField t1, t2;
@@ -9,14 +15,12 @@ public class PaineisBotoesTexto extends JFrame implements ItemListener
     JRadioButton radio1,radio2,radio3;
     ButtonGroup radiogroup;
 
-
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
 
         new PaineisBotoesTexto ();
     }
 
-    PaineisBotoesTexto () {
+    Calculadora() {
         setTitle("Uso de botoes de Radio ");
         setSize(340,150);
         getContentPane().setLayout(new FlowLayout(FlowLayout.CENTER));
@@ -54,7 +58,6 @@ public class PaineisBotoesTexto extends JFrame implements ItemListener
         setLocationRelativeTo(null);
     }
 
-
     public void itemStateChanged(ItemEvent e) {
         if (t1.getText().length()==0) return;
         try
@@ -69,8 +72,10 @@ public class PaineisBotoesTexto extends JFrame implements ItemListener
         }
         catch(NumberFormatException erro)
         {
-            t2.setText("Erro");  return;
+            t2.setText("Erro");
+        return;
         }
+
         t2.setText(""+result);
     }
 }
