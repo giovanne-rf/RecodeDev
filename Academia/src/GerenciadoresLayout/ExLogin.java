@@ -14,8 +14,8 @@ import javax.swing.JTextField;
 
 
 public class ExLogin extends ModeloJFrame implements ActionListener {
-    String usuario = "Teste";
-    String password = "senha";
+    String usuario = "Giovanne ";
+    String password = "28g12g69g";
 
     JLabel jlNome, jlSenha, l1;
     JTextField nome;
@@ -25,16 +25,17 @@ public class ExLogin extends ModeloJFrame implements ActionListener {
 
     ExLogin() {
         setTitle("Teste JPanel");
-        setSize(300,200);
+        setSize(400,200);
         GridLayout grid1 = new GridLayout(7,1,5,5);
-        login = new JButton("Login");
-        cancelar = new JButton("Cancelar");
 
-        l1 = new JLabel("Use suas credenciais para logar:");
+        login = new JButton("Entrar no sistema");
+        cancelar = new JButton("Cancelar");
+        l1 = new JLabel("Acesse o sistema:");
         nome = new JTextField();
         senha = new JPasswordField();
-        jlNome = new JLabel("Nome:");
+        jlNome = new JLabel("Usuário:");
         jlSenha = new JLabel("Senha:");
+
         getContentPane().add(l1);
         getContentPane().add(jlNome);
         getContentPane().add(nome);
