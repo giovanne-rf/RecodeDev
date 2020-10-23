@@ -22,8 +22,8 @@ public class ExLogin extends ModeloJFrame implements ActionListener {
     JPasswordField senha;
     JButton login, cancelar;
     JPanel panel1, panel2;
-    ExLogin() {
 
+    ExLogin() {
         setTitle("Teste JPanel");
         setSize(300,200);
         GridLayout grid1 = new GridLayout(7,1,5,5);
@@ -74,7 +74,6 @@ public class ExLogin extends ModeloJFrame implements ActionListener {
         }
 
     }
-
 
 
 }

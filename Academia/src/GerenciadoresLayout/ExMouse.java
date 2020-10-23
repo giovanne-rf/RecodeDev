@@ -1,10 +1,10 @@
 package GerenciadoresLayout;
 
 import java.awt.*; import java.awt.event.*; import javax.swing.*;
-public class ExMouse extends JFrame implements MouseMotionListener, MouseListener
-{	JLabel mensagem;
-    ExMouse()
-    {	super( "Eventos do Mouse " );
+public class ExMouse extends JFrame implements MouseMotionListener, MouseListener{
+    JLabel mensagem;
+    ExMouse() {
+        super( "Eventos do Mouse " );
         mensagem = new JLabel();
         getContentPane().add( mensagem );
         addMouseListener( this );
@@ -14,11 +14,11 @@ public class ExMouse extends JFrame implements MouseMotionListener, MouseListene
         setLocationRelativeTo(null);
     }
 
-    public void mouseClicked( MouseEvent e )
-    {		mensagem.setText( "Clicado em "+ coords(e) );	}
+    public void mouseClicked( MouseEvent e ) {
+        mensagem.setText( "Clicado em "+ coords(e) );	}
 
-    public void mousePressed( MouseEvent e )
-    {		mensagem.setText( "Pressionado em "+ coords(e) );	}
+    public void mousePressed( MouseEvent e )    {
+        mensagem.setText( "Pressionado em "+ coords(e) );	}
 
     public void mouseReleased( MouseEvent e )
     {		mensagem.setText( "Liberado em "+ coords(e) );	}
@@ -35,6 +35,9 @@ public class ExMouse extends JFrame implements MouseMotionListener, MouseListene
     public void mouseMoved( MouseEvent e )
     {		mensagem.setText( "Movido em " + coords(e) );	}
 
+    public void mouseExited(MouseEvents e){ // Giovanne
+        mensagem.setText( "Movido em " );
+    }
     public String coords(MouseEvent e)
     {		return e.getX() + ", " + e.getY() ;	}
 
