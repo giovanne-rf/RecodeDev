@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="RecodeDev">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/Academia/src" />
+      <root url="file://$PROJECT_DIR$/Banco/src" />
+      <root url="file://$PROJECT_DIR$/ControleHorasEasy/src" />
+      <root url="file://$PROJECT_DIR$/ControleHoras/src" />
+      <root url="file://$PROJECT_DIR$/DesafioAreas" />
+      <root url="file://$PROJECT_DIR$/GerenciadorTimesFutebol/src" />
+      <root url="file://$PROJECT_DIR$/Hermes/src" />
+      <root url="file://$PROJECT_DIR$/HotelCompleto/src" />
+      <root url="file://$PROJECT_DIR$/Joda/src" />
+      <root url="file://$PROJECT_DIR$/SistemaEscolar/src" />
+      <root url="file://$PROJECT_DIR$/campo-minado/src" />
+      <root url="file://$PROJECT_DIR$/campo-minado/test" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$" recursive="false" />
+  </library>
+</component>
