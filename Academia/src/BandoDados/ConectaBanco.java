@@ -7,7 +7,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.swing.JOptionPane;
-
 public class ConectaBanco
 {
     private static String USUARIO="";
@@ -30,7 +29,7 @@ public class ConectaBanco
     static Connection con;
 
 
-    public static Connection getConexao(String text, String s) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException
+    public static Connection getConexao() throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException
     {
         Connection conn = null;
         try
@@ -40,6 +39,31 @@ public class ConectaBanco
             conn = DriverManager.getConnection(url, USUARIO, SENHA);
             JOptionPane.showMessageDialog(null, "Conectado com usuário: " +
                     USUARIO + "\nSenha: "+  SENHA);
+            return conn;
+        }
+        catch (ClassNotFoundException e)
+        {
+            throw new ClassNotFoundException(
+                    "Driver Sql nao foi encontrado " + e.getMessage());
+
+        } catch (SQLException e)
+        {
+            throw new SQLException("Erro ao conectar "
+                    + "com a base de dados" + e.getMessage());
+        }
+    }
+
+    public static Connection getConexao(String banco, String usuario, String senha)
+            throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException
+    {
+        Connection conn = null;
+        try
+        {
+            DATABASE = banco;
+            System.out.println(usuario + senha);
+            Class.forName(DRIVER_CONEXAO).getInterfaces();
+            String url = STR_CONEXAO + "databaseName = " + DATABASE;
+            conn = DriverManager.getConnection(url, usuario, senha);
             return conn;
         }
         catch (ClassNotFoundException e)
@@ -88,5 +112,26 @@ public class ConectaBanco
             System.out.println("Nao foi possivel fechar o ResultSet " + e.getMessage());
         }
     }
+    public static Connection getConexao(String usuario, String senha) throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException
+    {
+        Connection conn = null;
+        try
+        {
+            System.out.println(usuario + senha);
+            Class.forName(DRIVER_CONEXAO).getInterfaces();
+            String url = STR_CONEXAO + "databaseName = " + DATABASE;
+            conn = DriverManager.getConnection(url, usuario, senha);
+            return conn;
+        }
+        catch (ClassNotFoundException e)
+        {
+            throw new ClassNotFoundException(
+                    "Driver Sql nao foi encontrado " + e.getMessage());
 
+        } catch (SQLException e)
+        {
+            throw new SQLException("Erro ao conectar "
+                    + "com a base de dados" + e.getMessage());
+        }
+    }
 }
